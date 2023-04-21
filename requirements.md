@@ -1,8 +1,8 @@
-# Requirements (by ChatGPT)
+# Requirements 
 
 **Laurence Zanotti**  
-Write me a project requirements where I can exercise Java concepts like OOP, Inheritance, Exception handling and Data Persistence.
----
+Write me a project requirements where I can exercise Java concepts like OOP, Inheritance, Exception handling and Data Persistence.  
+
 **ChatGPT**  
 Sure, here's a sample project requirements that exercises Java concepts like OOP, Inheritance, Exception Handling, and Data Persistence:
 
