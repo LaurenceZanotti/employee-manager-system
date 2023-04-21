@@ -2,6 +2,8 @@ import view.Console;
 
 public class Main {
     public static void main(String[] args) {
-        Console.greetings();
+        Console console = new Console();
+        console.greetings();
+        console.listen();
     }
 }

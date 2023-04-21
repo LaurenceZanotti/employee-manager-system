@@ -1,13 +1,19 @@
 package view;
+import java.util.Scanner;
 
 public class Console {
-    public Console() {}
+    private boolean isListening = false;
+    private Scanner scan;
 
+    public Console() {
+        startListening();
+        this.scan = new Scanner(System.in);
+    }
 
     /**
      * Displays the application description and usage
      */
-    public static void greetings() {
+    public void greetings() {
         System.out.println(
         """
         EmpManSys 0.0.0
@@ -24,10 +30,33 @@ public class Console {
         
         1 - Sign up an employee
         2 - List employees
-        2 - Show an employee details
-        3 - Update an employee information
-        4 - Delete an employee
+        3 - Show an employee details
+        4 - Update an employee information
+        5 - Delete an employee
+        
+        0 - Quit
         """
         );
+    }
+
+    /**
+     * Starts listening for user input to perform an action
+     * within the command line
+     */
+    public void listen() {
+        while (isListening) {
+            System.out.println("Enter an option:\n");
+            String in = scan.nextLine();
+            System.out.println(in);
+            stopListening();
+        }
+    }
+
+    private void stopListening() {
+        this.isListening = false;
+    }
+
+    private void startListening() {
+        this.isListening = true;
     }
 }
