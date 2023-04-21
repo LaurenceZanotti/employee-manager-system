@@ -47,8 +47,43 @@ public class Console {
         while (isListening) {
             System.out.println("Enter an option:\n");
             String in = scan.nextLine();
-            System.out.println(in);
-            stopListening();
+            performAction(in);
+        }
+    }
+
+    private void performAction(String in) {
+        switch (in) {
+            case "0":
+                System.out.println("Thanks for using EmpManSys. Exiting...");
+                stopListening();
+                break;
+            case "1":
+                System.out.println("Signing up an employee");
+                break;
+            case "2":
+                System.out.println("List of employees");
+                break;
+            case "3":
+                System.out.println("Employee details");
+                break;
+            case "4":
+                System.out.println("Update employee information");
+                break;
+            case "5":
+                System.out.println("Delete an employee");
+                break;
+            default:
+                System.out.println(
+                    """
+                    The options are:
+                    1 - Sign up an employee
+                    2 - List employees
+                    3 - Show an employee details
+                    4 - Update an employee information
+                    5 - Delete an employee
+                    """
+                );
+                break;
         }
     }
 
